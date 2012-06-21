@@ -44,10 +44,15 @@ class Neatline_IndexController extends Omeka_Controller_Action
 
         $this->_browseRecordsPerPage = get_option('per_page_admin');
 
-        try {
-            $this->_table = $this->getTable($modelName);
-            $this->aclResource = $this->findById();
-        } catch (Omeka_Controller_Exception_404 $e) {}
+        $this->_table = $this->getTable($modelName);
+        $aclCheck = apply_filters('neatline_acl', null);
+        if ($aclCheck === null) {
+            try {
+                $this->aclResource = $this->findById();
+            } catch (Omeka_Controller_Exception_404 $e) {}
+        } elseif ($aclCheck === false) {
+            throw new Omeka_Controller_Exception_403('Invalid authorization.');
+        }
 
         $this->_recordsTable = $this->getTable('NeatlineDataRecord');
 
