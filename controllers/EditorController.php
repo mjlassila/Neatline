@@ -43,10 +43,15 @@ class Neatline_EditorController extends Omeka_Controller_Action
             $this->_modelClass = $modelName;
         }
 
-        try {
-            $this->_table = $this->getTable($modelName);
-            $this->aclResource = $this->findById();
-        } catch (Omeka_Controller_Exception_404 $e) {}
+        $this->_table = $this->getTable($modelName);
+        $aclCheck = apply_filters('neatline_acl', null);
+        if ($aclCheck === null) {
+            try {
+                $this->aclResource = $this->findById();
+            } catch (Omeka_Controller_Exception_404 $e) {}
+        } elseif ($aclCheck === false) {
+            throw new Omeka_Controller_Exception_403('Invalid authorization.');
+        }
 
         // Get tables.
         $this->_neatlinesTable =    $this->_table;

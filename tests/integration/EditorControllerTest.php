@@ -2812,4 +2812,48 @@ class Neatline_EditorControllerTest extends Omeka_Test_AppTestCase
 
     }
 
+    /**
+     * This tests the hook for by-passing the ACL check in the 
+     * EditorController.
+     *
+     * @return void
+     * @author Eric Rochester <erochest@virginia.edu>
+     **/
+    public function testNeatlineAclHook()
+    {
+        $exhibit = $this->helper->_createNeatline();
+        $item    = $this->helper->_createItem();
+
+        // Pass filter
+        add_filter('neatline_acl', '_pass_filter');
+        $this->dispatch("neatline-exhibits/editor/{$exhibit->id}");
+        $this->assertResponseCode(200);
+    }
+
+    /**
+     * This tests the hook for by-passing the ACL check in the 
+     * EditorController.
+     *
+     * @expectedException Omeka_Controller_Exception_403
+     *
+     * @return void
+     * @author Eric Rochester <erochest@virginia.edu>
+     **/
+    public function testNeatlineAclHookFail()
+    {
+        $exhibit = $this->helper->_createNeatline();
+        $item    = $this->helper->_createItem();
+
+        // Deny filter
+        add_filter('neatline_acl', '_deny_filter');
+        $this->dispatch("neatline-exhibits/editor/{$exhibit->id}");
+    }
+
 }
+
+function _deny_filter($input) {
+    return false;
+};
+function _pass_filter($input) {
+    return true;
+};
