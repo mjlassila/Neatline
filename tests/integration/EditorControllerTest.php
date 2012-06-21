@@ -2825,7 +2825,7 @@ class Neatline_EditorControllerTest extends Omeka_Test_AppTestCase
         $item    = $this->helper->_createItem();
 
         // Pass filter
-        add_filter('neatline_acl', '_pass_filter');
+        add_filter('neatline_acl', '_editor_pass_filter');
         $this->dispatch("neatline-exhibits/editor/{$exhibit->id}");
         $this->assertResponseCode(200);
     }
@@ -2845,15 +2845,15 @@ class Neatline_EditorControllerTest extends Omeka_Test_AppTestCase
         $item    = $this->helper->_createItem();
 
         // Deny filter
-        add_filter('neatline_acl', '_deny_filter');
+        add_filter('neatline_acl', '_editor_deny_filter');
         $this->dispatch("neatline-exhibits/editor/{$exhibit->id}");
     }
 
 }
 
-function _deny_filter($input) {
+function _editor_deny_filter($input) {
     return false;
 };
-function _pass_filter($input) {
+function _editor_pass_filter($input) {
     return true;
 };
