@@ -2820,8 +2820,8 @@ class Neatline_EditorControllerTest extends Neatline_Test_AppTestCase
      **/
     public function testNeatlineAclHook()
     {
-        $exhibit = $this->helper->_createNeatline();
-        $item    = $this->helper->_createItem();
+        $exhibit = $this->_createNeatline();
+        $item    = $this->_createItem();
 
         // Pass filter
         add_filter('neatline_acl', '_editor_pass_filter');
@@ -2840,8 +2840,8 @@ class Neatline_EditorControllerTest extends Neatline_Test_AppTestCase
      **/
     public function testNeatlineAclHookFail()
     {
-        $exhibit = $this->helper->_createNeatline();
-        $item    = $this->helper->_createItem();
+        $exhibit = $this->_createNeatline();
+        $item    = $this->_createItem();
 
         // Deny filter
         add_filter('neatline_acl', '_editor_deny_filter');
