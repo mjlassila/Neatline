@@ -32,7 +32,7 @@
 
 <?php echo $this->partial('editor/_editor_header.php', array(
     'exhibit' => $neatlineexhibit,
-    'titlePrefix' => 'Neatline Editor',
+    'titlePrefix' => __('Neatline Editor'),
     'title' => $neatlineexhibit->name
 )); ?>
 

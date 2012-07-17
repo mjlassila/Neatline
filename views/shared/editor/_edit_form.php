@@ -41,14 +41,14 @@
             <div class="clearfix">
                 <label for="title"><?php echo __('Title'); ?></label>
                 <div class="input">
-                    <?php echo '<textarea id="item-title" class="xlarge" name="title" placeholder='.__('Title'). ' rows="1"></textarea>'; ?>
+                    <?php echo '<textarea id="item-title" class="xlarge" name="title" placeholder="'.__('Title'). '" rows="1"></textarea>'; ?>
                 </div>
             </div>
 
             <div class="clearfix">
                 <label for="description">Description</label>
                 <div class="input">
-                    <?php echo __('<textarea id="item-description" class="xlarge" name="description" placeholder='.__('Description').' rows="4"></textarea>'; ?>
+                    <?php echo __('<textarea id="item-description" class="xlarge" name="description" placeholder="'.__('Description').'" rows="4"></textarea>'; ?>
                 </div>
             </div>
 
@@ -74,7 +74,7 @@
                 <label><?php echo __('Start Date'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
-                        <input class="xlarge" name="start-date-date" type="text" placeholder="Start Date" />
+                        <?php echo '<input class="xlarge" name="start-date-date" type="text" placeholder="'.__('Start Date').'" />': ?>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                 <label><?php echo __('End Date'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
-                        <input class="xlarge" name="end-date-date" type="text" placeholder="End Date" />
+                        <?php echo '<input class="xlarge" name="end-date-date" type="text" placeholder="'.__('End Date').'" />'; ?>
                     </div>
                 </div>
             </div>
@@ -92,7 +92,7 @@
                 <label><?php echo __('Start Visible Date'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
-                        <input class="xlarge" name="start-visible-date" type="text" placeholder="Start Date" />
+                        <?php echo '<input class="xlarge" name="start-visible-date" type="text" placeholder="'.__('Start Date').'" />'; ?>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@
                 <label><?php echo __('End Visible Date'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
-                        <input class="xlarge" name="end-visible-date" type="text" placeholder="End Date" />
+                        <?php echo '<input class="xlarge" name="end-visible-date" type="text" placeholder="'.__('End Date').'" />'; ?>
                     </div>
                 </div>
             </div>
@@ -211,7 +211,7 @@
                 <label><?php echo __('Point Graphic'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
-                        <input class="xlarge" name="point-image" type="text" placeholder="An external graphic to represent a point" />
+                        <?php echo '<input class="xlarge" name="point-image" type="text" placeholder="'.__('An external graphic to represent a point').'" />'; ?>
                     </div>
                 </div>
             </div>
