@@ -39,7 +39,7 @@
     <tbody>
 
     <tr id="neatline-header" class="header-row <?php if (!$records) { echo 'hidden'; } ?>">
-        <td class="neatline-bar">Neatline Records</td>
+        <td class="neatline-bar"><?php echo __('Neatline Records'); ?></td>
         <td class="col-1 neatline-bar"></td>
         <td class="col-2 neatline-bar"></td>
         <td class="col-3 neatline-bar"></td>
@@ -52,9 +52,9 @@
                 <span class="item-title-text"><?php echo $record->getTitleOrDescription(); ?></span>
                 <span class="item-title-fader"></span>
                 <div class="form-actions">
-                    <a href="#" class="save">Save</a>
-                    <a href="#" class="delete">Delete</a>
-                    <a href="#" class="return">Close</a>
+                    <a href="#" class="save"><?php echo __('Save'); ?></a>
+                    <a href="#" class="delete"><?php echo __('Delete'); ?></a>
+                    <a href="#" class="return"><?php echo __('Close'); ?></a>
                 </div>
             </td>
             <td class="col-1 col-row items">
@@ -73,7 +73,7 @@
     <?php endforeach; ?>
 
     <tr id="omeka-header" class="header-row <?php if (count($items) == 0) { echo 'hidden'; } ?>">
-        <td class="neatline-bar">Omeka Records</td>
+        <td class="neatline-bar"><?php echo __('Omeka Records'); ?></td>
         <td class="col-1 neatline-bar"></td>
         <td class="col-2 neatline-bar"></td>
         <td class="col-3 neatline-bar"></td>
@@ -86,9 +86,9 @@
                 <span class="item-title-text"><?php echo item('Dublin Core', 'Title', null, $item); ?></span>
                 <span class="item-title-fader"></span>
                 <div class="form-actions">
-                    <a href="#" class="save">Save</a>
-                    <a href="#" class="delete">Delete</a>
-                    <a href="#" class="return">Close</a>
+                    <a href="#" class="save"><?php echo __('Save'); ?></a>
+                    <a href="#" class="delete"><?php echo __('Delete'); ?></a>
+                    <a href="#" class="return"><?php echo __('Close'); ?></a>
                 </div>
             </td>
             <td class="col-1 col-row items">

@@ -349,7 +349,7 @@ class NeatlinePlugin
     {
 
         if (get_plugin_ini('Neatline', 'saas') == 'false' && has_permission('Neatline_Index', 'showNotPublic')) {
-            $tabs['Neatline'] = uri('neatline-exhibits');
+            $tabs[__('Neatline')] = uri('neatline-exhibits');
         }
 
         return $tabs;

@@ -1,4 +1,4 @@
-<?php echo link_to_item('Open item home page in new tab', array(
+<?php echo link_to_item(__('Open item home page in new tab'), array(
     'class' => 'item-dc-link',
     'target' => '_blank'
 ), 'show', $item); ?>

@@ -78,7 +78,7 @@ class Neatline_IndexController extends Omeka_Controller_Action
             }
 
             else {
-                $this->flashError('There were problems with your form.');
+                $this->flashError(__('There were problems with your form.'));
             }
 
         }
@@ -111,7 +111,7 @@ class Neatline_IndexController extends Omeka_Controller_Action
             }
 
             else {
-                $this->flashError('There were problems with your form.');
+                $this->flashError(__('There were problems with your form.'));
             }
 
         }
@@ -228,7 +228,7 @@ class Neatline_IndexController extends Omeka_Controller_Action
      */
     protected function _getAddSuccessMessage($neatline)
     {
-        return 'The Neatline "' . $neatline->name . '" was successfully added!';
+        return __('The Neatline "') . $neatline->name . __('" was successfully added!');
     }
 
     /**
@@ -236,7 +236,7 @@ class Neatline_IndexController extends Omeka_Controller_Action
      */
     protected function _getEditSuccessMessage($neatline)
     {
-        return 'The Neatline "' . $neatline->name . '" was successfully changed!';
+        return __('The Neatline "') . $neatline->name . __('" was successfully changed!');
     }
 
     /**
@@ -244,7 +244,7 @@ class Neatline_IndexController extends Omeka_Controller_Action
      */
     protected function _getDeleteSuccessMessage($neatline)
     {
-        return 'The Neatline "' . $neatline->name . '" was successfully deleted!';
+        return __('The Neatline "') . $neatline->name . __('" was successfully deleted!');
     }
 
     /**
@@ -252,8 +252,8 @@ class Neatline_IndexController extends Omeka_Controller_Action
      */
     protected function _getDeleteConfirmMessage($neatline)
     {
-        return 'This will delete the Neatline "'. $neatline->name .'" '
-             . 'and its associated metadata.';
+        return __('This will delete the Neatline "'). $neatline->name .'" '
+             . __('and its associated metadata.');
     }
 
     /**

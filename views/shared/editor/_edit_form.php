@@ -30,39 +30,39 @@
     <form class="form-stacked">
 
         <ul class="tabs-header">
-            <li><a href="#tabs-1">Text</a></li>
-            <li><a href="#tabs-2">Temporal</a></li>
-            <li><a href="#tabs-3">Styling</a></li>
-            <li><a href="#tabs-4">Relations</a></li>
+            <li><a href="#tabs-1"><?php echo __('Text'); ?></a></li>
+            <li><a href="#tabs-2"><?php echo __('Temporal'); ?></a></li>
+            <li><a href="#tabs-3"><?php echo __('Styling'); ?></a></li>
+            <li><a href="#tabs-4"><?php echo __('Relations'); ?></a></li>
         </ul>
 
         <div id="tabs-1" class="fieldset">
 
             <div class="clearfix">
-                <label for="title">Title</label>
+                <label for="title"><?php echo __('Title'); ?></label>
                 <div class="input">
-                    <textarea id="item-title" class="xlarge" name="title" placeholder="Title" rows="1"></textarea>
+                    <?php echo '<textarea id="item-title" class="xlarge" name="title" placeholder='.__('Title'). ' rows="1"></textarea>'; ?>
                 </div>
             </div>
 
             <div class="clearfix">
                 <label for="description">Description</label>
                 <div class="input">
-                    <textarea id="item-description" class="xlarge" name="description" placeholder="Description" rows="4"></textarea>
+                    <?php echo __('<textarea id="item-description" class="xlarge" name="description" placeholder='.__('Description').' rows="4"></textarea>'; ?>
                 </div>
             </div>
 
             <div class="clearfix checkbox">
                 <label>
                     <input type="checkbox" name="show-bubble">
-                    <span>Show pop-up bubble.</span>
+                    <span><?php echo __('Show pop-up bubble.'); ></span>
                 </label>
             </div>
 
             <div id="use-dc-data-container" class="clearfix checkbox">
                 <label>
                     <input type="checkbox" name="use-dc-data">
-                    <span>Use default item metadata.</span>
+                    <span><?php echo __('Use default item metadata.'); ?></span>
                 </label>
             </div>
 
@@ -71,7 +71,7 @@
         <div id="tabs-2" class="fieldset">
 
             <div class="clearfix">
-                <label>Start Date</label>
+                <label><?php echo __('Start Date'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
                         <input class="xlarge" name="start-date-date" type="text" placeholder="Start Date" />
@@ -80,7 +80,7 @@
             </div>
 
             <div class="clearfix">
-                <label>End Date</label>
+                <label><?php echo __('End Date'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
                         <input class="xlarge" name="end-date-date" type="text" placeholder="End Date" />
@@ -89,7 +89,7 @@
             </div>
 
             <div class="clearfix">
-                <label>Start Visible Date</label>
+                <label><?php echo __('Start Visible Date'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
                         <input class="xlarge" name="start-visible-date" type="text" placeholder="Start Date" />
@@ -98,7 +98,7 @@
             </div>
 
             <div class="clearfix">
-                <label>End Visible Date</label>
+                <label><?php echo __('End Visible Date'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
                         <input class="xlarge" name="end-visible-date" type="text" placeholder="End Date" />
@@ -107,7 +107,7 @@
             </div>
 
             <div class="clearfix">
-                <label>Date Ambiguity</label>
+                <label><?php echo __('Date Ambiguity'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
                         <div class="date-ambiguity-container">
@@ -129,7 +129,7 @@
             <table class="map-styles">
                 <tr>
                     <td>
-                        <label>Shape Color</label>
+                        <label><?php echo __('Shape Color'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="color-picker" name="vector-color" />
@@ -137,7 +137,7 @@
                         </div>
                     </td>
                     <td>
-                        <label>Line Color</label>
+                        <label><?php echo __('Line Color'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="color-picker" name="stroke-color" />
@@ -145,7 +145,7 @@
                         </div>
                     </td>
                     <td>
-                        <label>Selected Color</label>
+                        <label><?php echo __('Selected Color'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="color-picker" name="highlight-color" />
@@ -155,7 +155,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label>Shape Opacity</label>
+                        <label><?php echo __('Shape Opacity'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="integer-dragger" name="vector-opacity" />
@@ -163,7 +163,7 @@
                         </div>
                     </td>
                     <td>
-                        <label>Selected Opacity</label>
+                        <label><?php echo __('Selected Opacity'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="integer-dragger" name="select-opacity" />
@@ -171,7 +171,7 @@
                         </div>
                     </td>
                     <td>
-                        <label>Line Opacity</label>
+                        <label><?php echo __('Line Opacity'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="integer-dragger" name="stroke-opacity" />
@@ -181,7 +181,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <label>Graphic Opacity</label>
+                        <label><?php echo __('Graphic Opacity'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="integer-dragger" name="graphic-opacity" />
@@ -189,7 +189,7 @@
                         </div>
                     </td>
                     <td>
-                        <label>Line Width</label>
+                        <label><?php echo __('Line Width'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="integer-dragger" name="stroke-width" />
@@ -197,7 +197,7 @@
                         </div>
                     </td>
                     <td>
-                        <label>Point Radius</label>
+                        <label><?php echo __('Point Radius'); ?></label>
                         <div class="input">
                             <div class="inline-inputs">
                                 <input type="text" class="integer-dragger" name="point-radius" />
@@ -208,7 +208,7 @@
             </table>
 
             <div class="clearfix">
-                <label>Point Graphic</label>
+                <label><?php echo __('Point Graphic'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
                         <input class="xlarge" name="point-image" type="text" placeholder="An external graphic to represent a point" />
@@ -221,14 +221,14 @@
                     <td>
                         <div class="input">
                             <div class="inline-inputs">
-                                <button class="btn icon undo reset-styles">Reset Item Styles</button>
+                                <button class="btn icon undo reset-styles"><?php echo __('Reset Item Styles'); ?></button>
                             </div>
                         </div>
                     </td>
                     <td>
                         <div class="input">
                             <div class="inline-inputs">
-                                <button class="btn icon home map-focus">Set Map Focus</button>
+                                <button class="btn icon home map-focus"><?php echo __('Set Map Focus'); ?></button>
                             </div>
                         </div>
                     </td>
@@ -240,7 +240,7 @@
         <div id="tabs-4" class="fieldset">
 
             <div class="clearfix">
-                <label>Parent Record</label>
+                <label><?php echo __('Parent Record'); ?></label>
                 <div class="input">
                     <div class="inline-inputs">
                         <select name="parent-record">
@@ -255,8 +255,8 @@
 
             <div id="edit-form-actions" class="actions">
                 <input type="submit" class="btn primary" value="Save">
-                <button id="record-close-button" class="btn">Close Record</button>
-                <button id="record-delete-button" class="btn danger">Delete</button>
+                <button id="record-close-button" class="btn"><?php echo __('Close Record'); ?></button>
+                <button id="record-delete-button" class="btn danger"><?php echo __('Delete'); ?></button>
             </div>
 
         </div>

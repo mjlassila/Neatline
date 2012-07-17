@@ -710,7 +710,7 @@ class NeatlineDataRecord extends Omeka_record
             }
 
             else {
-                return '[Untitled]';
+                return __('[Untitled]');
             }
 
         }
